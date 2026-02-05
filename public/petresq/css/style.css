@@ -1,0 +1,1280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oxanium", cursive;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* NAVBAR RIGHT WRAPPER */
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+/* GUEST NAV (LOGIN & DAFTAR) */
+.nav-guest {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* NAVBAR LINK */
+.nav-link {
+    text-decoration: none;
+    color: #153752;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: #548cb9;
+}
+
+/* USER NAV (SETELAH LOGIN) */
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-container {
+    width: 1245px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.logo {
+    width: 89px;
+    height: 89px;
+}
+
+.brand {
+    font-size: 40px;
+    font-weight: 700;
+    color: #153752;
+}
+
+.hero {
+    width: 1245px;
+    height: 469px;
+    background: #548cb9;
+    border-radius: 30px;
+    margin: 0 auto;
+    padding: 60px 80px;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    align-items: center; /* INI KUNCI */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.menu-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 60px 0;
+}
+
+.menu-card {
+    width: 229px;
+    height: 234px;
+    background: #548cb9;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px; /* JARAK ICON & TEKS */
+
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.menu-card span {
+    font-size: 24px;
+    font-weight: 600; /* BOLD */
+    color: #153752;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
+
+.btn-login,
+.btn-daftar {
+    width: 107px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background: #153752;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-login:hover,
+.btn-daftar:hover {
+    background: #1f4f73;
+    transform: translateY(-2px);
+}
+
+.btn-login:active,
+.btn-daftar:active {
+    transform: translateY(0);
+    background: #0f2f45;
+}
+
+.btn-daftar.active {
+    background: #548cb9;
+}
+
+/* ===================== */
+/* HALAMAN DAFTAR */
+/* ===================== */
+
+.daftar-page {
+    background: #548cb9;
+    min-height: 100vh;
+    font-family: "Oxanium", cursive;
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 2px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #000;
+    z-index: 5;
+}
+
+.daftar-wrapper {
+    width: 1180px;
+    height: 760px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+/* IMAGE */
+.daftar-image {
+    width: 100%;
+    height: 100%;
+    position: relative; /* PENTING */
+}
+
+.daftar-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 230px;
+}
+
+/* FORM PANEL */
+.daftar-form {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+
+    width: 560px;
+    height: 720px;
+    background: #ffffff;
+
+    border-radius: 50px 230px 230px 50px;
+    padding: 60px 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.daftar-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-daftar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* TAMBAHAN */
+    gap: 14px;
+    margin-bottom: 30px;
+    margin-right: 40px;
+}
+
+.logo-daftar img {
+    width: 89px;
+    height: 89px;
+}
+
+.logo-daftar span {
+    font-size: 40px;
+    font-weight: 700;
+    color: #153752;
+}
+
+.daftar-form h2 {
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* INPUT */
+.daftar-form input {
+    width: 380px;
+    height: 69px;
+    border-radius: 40px;
+    border: 2px solid #548cb9;
+    padding: 0 24px;
+    font-size: 24px;
+    margin-bottom: 26px;
+    outline: none;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 380px;
+}
+
+.password-wrapper input {
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-100%); /* NAIK SEDIKIT */
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* BUTTON */
+.daftar-form button {
+    width: 380px;
+    height: 69px;
+    border-radius: 40px;
+    border: none;
+    background: #548cb9;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.user-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.username {
+    font-size: 20px;
+    font-weight: 600;
+    color: #153752;
+}
+
+/* ================= FORM PELAPORAN ================= */
+
+/* CONTAINER UTAMA */
+.form-container {
+    max-width: 1240px;
+    margin: 60px auto;
+}
+
+/* JUDUL */
+.form-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #153752;
+    margin-bottom: 40px;
+}
+
+/* WRAPPER 2 KOLOM */
+.form-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* KIRI - UPLOAD */
+.upload-box {
+    width: 420px;
+}
+
+.upload-area {
+    width: 100%;
+    height: 360px;
+    border: 2px dashed #aaa;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    background: #fff;
+    padding-top: 120px;
+}
+
+.upload-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.upload-area p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.upload-area span {
+    font-size: 14px;
+    color: #777;
+}
+
+/* KANAN - FORM */
+.report-form {
+    flex: 1;
+}
+
+.report-form label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.report-form input,
+.report-form textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1.5px solid #333;
+    font-size: 16px;
+}
+
+.report-form textarea {
+    min-height: 140px;
+    resize: none;
+}
+
+/* RADIO */
+.radio-group {
+    display: flex;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+/* SUBMIT */
+.submit-btn {
+    margin-top: 30px;
+    padding: 14px 36px;
+    background: #153752;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ================= DAFTAR HEWAN ================= */
+
+.daftar-hewan-page {
+    width: 1245px;
+    margin: 40px auto;
+}
+
+.daftar-hewan-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #153752;
+    margin-bottom: 40px;
+}
+
+.daftar-hewan-list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.hewan-card {
+    width: 253px;
+    height: 511px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.hewan-card:hover {
+    transform: translateY(-6px);
+}
+
+.hewan-image img {
+    width: 253px;
+    height: 253px;
+    object-fit: cover;
+    border-radius: 30px 30px 0 0;
+}
+
+.hewan-info {
+    padding: 20px;
+}
+
+.hewan-info h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #153752;
+    margin-bottom: 10px;
+}
+
+.hewan-location {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.hewan-desc {
+    font-size: 15px;
+    color: #555;
+}
+
+.search-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 40px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    border-radius: 40px;
+    padding: 12px 18px;
+    width: 520px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-btn {
+    background: #4f8db8;
+    color: white;
+    border: none;
+    padding: 10px 26px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* ================= DETAIL HEWAN ================= */
+
+.detail-container {
+    width: 1245px;
+    margin: 40px auto;
+}
+
+.detail-back {
+    font-size: 36px;
+    text-decoration: none;
+    color: #153752;
+}
+
+.detail-image img {
+    width: 1260px;
+    height: 445px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.detail-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.detail-left h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #153752;
+}
+
+.detail-address {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.detail-desc {
+    line-height: 1.6;
+    color: #555;
+}
+
+.detail-right h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.detail-contact {
+    font-size: 18px;
+    color: #153752;
+}
+.detail-actions {
+    display: flex;
+    justify-content: flex-end; /* 👉 pindah ke kanan */
+    align-items: center;
+    gap: 16px; /* 👉 jarak antar tombol */
+    margin: -40px 0 30px; /* 👉 jarak atas & bawah */
+}
+
+.edit-btn {
+    padding: 8px 14px;
+    background: #153752;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.delete-btn {
+    padding: 8px 14px;
+    background: #c62828;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.edit-btn,
+.delete-btn {
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ================= KOMENTAR ================= */
+
+.comment-section {
+    margin-top: 60px;
+}
+
+.comment-input {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.comment-input input {
+    flex: 1;
+    padding: 12px;
+    border-bottom: 1.5px solid #333;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+
+.comment-input button {
+    background: #153752;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.comment-item {
+    margin-top: 20px;
+}
+
+.comment-user {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.comment-user img {
+    width: 36px;
+}
+
+.comment-user .username {
+    font-weight: 600;
+}
+
+.comment-user .time {
+    font-size: 14px;
+    color: #888;
+}
+
+.comment-text {
+    margin: 10px 0;
+}
+
+.comment-action {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.comment-action a {
+    text-decoration: none;
+    color: #153752;
+}
+
+/* ================= PROFILE ================= */
+
+.profile-page {
+    min-height: calc(100vh - 120px); /* kurangi tinggi navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #153752;
+    margin: 0 0 25px;
+}
+
+.profile-card {
+    width: 420px;
+    height: auto;
+
+    background: #f5f5f5;
+    border-radius: 180px 180px 120px 120px;
+    padding: 30px 25px 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    margin-bottom: 50px;
+}
+
+.profile-photo img {
+    width: 260px;
+    height: 360px;
+    object-fit: cover;
+
+    border-radius: 30px 30px 80px 80px;
+    margin-bottom: 20px;
+}
+
+.profile-name {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.profile-text {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.profile-edit-btn {
+    width: 160px;
+    height: 52px;
+
+    border-radius: 30px;
+    border: 1px solid #153752;
+    background: transparent;
+
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+
+    margin: 20px auto 0; /* 🔑 CENTER + jarak atas */
+    display: block;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profile-edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.profile-edit input,
+.profile-edit textarea {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #153752;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.user-info:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+/* ================= MAPS ================= */
+
+.maps-page {
+    width: 1245px;
+    margin: 40px auto;
+}
+
+.maps-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* MAP WRAPPER */
+.map-area {
+    width: 100%;
+    height: 460px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* MARKER DUMMY */
+.map-marker {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #e53935;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 0 6px rgba(229, 57, 53, 0.25);
+}
+
+/* RIGHT PANEL */
+.map-info {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.map-info.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* INFO CARD */
+.doctor-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}
+
+.doctor-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #153752;
+}
+
+.doc-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #444;
+}
+
+.doc-row span {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.doc-row p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* ================= EDUKASI ================= */
+
+.edukasi-page {
+    width: 1245px;
+    margin: 40px auto;
+}
+
+.back-home {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #153752;
+    font-weight: 600;
+}
+
+.edukasi-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #153752;
+    margin-bottom: 40px;
+}
+
+/* GRID LIST */
+.edukasi-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+.edukasi-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.edukasi-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE */
+.edukasi-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* TITLE */
+.edukasi-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #153752;
+}
+
+/* EXCERPT */
+.edukasi-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* LINK */
+.edukasi-card a {
+    margin-top: auto;
+    text-decoration: none;
+    font-weight: 600;
+    color: #548cb9;
+}
+
+.edukasi-card a:hover {
+    text-decoration: underline;
+}
+
+/* ================= DETAIL EDUKASI ================= */
+
+.edukasi-detail-container {
+    width: 1245px;
+    margin: 40px auto;
+}
+
+.edukasi-back {
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #153752;
+}
+
+.edukasi-detail-card {
+    background: #9ebbd0;
+    border-radius: 28px;
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* IMAGE */
+.edukasi-image-wrapper {
+    flex: 0 0 420px;
+}
+
+.edukasi-image {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* ukuran opsional */
+.edukasi-image.small {
+    height: 220px;
+}
+.edukasi-image.medium {
+    height: 300px;
+}
+.edukasi-image.large {
+    height: 380px;
+}
+
+/* CONTENT */
+.edukasi-body {
+    flex: 1;
+    color: #ffffff;
+}
+
+.edukasi-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.edukasi-date {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.edukasi-content {
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* paragraf biar ga nempel */
+.edukasi-content p {
+    margin-bottom: 14px;
+}
+/* ================= EDIT LAPORAN HEWAN ================= */
+
+.form-container {
+    max-width: 720px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* JUDUL */
+.form-container h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #153752;
+    margin-bottom: 30px;
+}
+
+/* FORM */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* LABEL */
+.form-container label {
+    font-weight: 600;
+    color: #153752;
+    font-size: 14px;
+}
+
+/* INPUT & TEXTAREA & SELECT */
+.form-container input,
+.form-container textarea,
+.form-container select {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1.5px solid #cfd8e3;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-container textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-container input:focus,
+.form-container textarea:focus,
+.form-container select:focus {
+    border-color: #153752;
+}
+
+/* BUTTON AREA */
+.form-container button {
+    margin-top: 24px;
+    align-self: flex-end;
+    background: #153752;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* LINK BATAL */
+.form-container a {
+    margin-top: 12px;
+    align-self: flex-end;
+    text-decoration: none;
+    color: #153752;
+    font-size: 14px;
+}
+
+/* ================= ADMIN EDUKASI ================= */
+
+.admin-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #153752;
+}
+
+.btn-add {
+    background: #153752;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* TABLE */
+.admin-table-wrapper {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table thead {
+    background: #f4f7fb;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 16px;
+    font-weight: 600;
+    color: #153752;
+}
+
+.admin-table td {
+    padding: 16px;
+    border-top: 1px solid #eee;
+    color: #333;
+}
+
+/* ACTION */
+.action-col {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit {
+    background: #e7f0fa;
+    color: #153752;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-delete {
+    background: #ffe6e6;
+    color: #c62828;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+/* ================= ADMIN FORM ================= */
+
+.admin-form-card {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.admin-form-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #153752;
+    margin-bottom: 30px;
+}
+
+.admin-form .form-group {
+    margin-bottom: 20px;
+}
+
+.admin-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #153752;
+}
+
+.admin-form input[type="text"],
+.admin-form textarea,
+.admin-form select,
+.admin-form input[type="file"] {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #ddd;
+    font-family: "Oxanium", sans-serif;
+}
+
+.admin-form textarea {
+    resize: vertical;
+}
+
+.preview-image {
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ACTION */
+.form-action {
+    display: flex;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.btn-save {
+    background: #153752;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-cancel {
+    background: #e7f0fa;
+    color: #153752;
+    padding: 12px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+/* ERROR */
+.admin-error {
+    background: #fdeaea;
+    color: #b30000;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
