@@ -101,6 +101,7 @@ Route::get('/create-admin', function () {
     User::create([
         'name' => 'Admin',
         'email' => 'admin@petresq.com',
+        'role' => 'admin',
         'password' => Hash::make('admin123'),
         'email_verified_at' => now(),
     ]);
