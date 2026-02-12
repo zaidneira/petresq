@@ -5,6 +5,8 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EducationController;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 Route::get('/', function () {
     return view('pages.home');
@@ -91,4 +93,17 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/edukasi/{education}/edit', [EducationController::class, 'edit'])->name('admin.edukasi.edit');
     Route::put('/edukasi/{education}', [EducationController::class, 'update'])->name('admin.edukasi.update');
     Route::delete('/edukasi/{education}', [EducationController::class, 'destroy'])->name('admin.edukasi.destroy');
+});
+
+
+
+Route::get('/create-admin', function () {
+    User::create([
+        'name' => 'Admin',
+        'email' => 'admin@petresq.com',
+        'password' => Hash::make('admin123'),
+        'email_verified_at' => now(),
+    ]);
+
+    return 'Admin Created';
 });
